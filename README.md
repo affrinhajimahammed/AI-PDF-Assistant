@@ -187,18 +187,3 @@ python test_app.py
 
 ---
 
-## 🎓 Fresher Interview Cheatsheet
-
-### 1. How would you introduce this project in an interview?
-> *"I built a local AI PDF Question-Answering Assistant using Python, Streamlit, PyMuPDF, and Scikit-Learn. It parses multi-page PDF documents, chunks text with sliding-window overlap to retain context, and builds a TF-IDF vector space model. When a user asks a question, the app computes Cosine Similarity between the query vector and passage vectors to extract the top-matching evidence with exact page citations. Because it uses extractive information retrieval rather than a generative LLM, it is 100% free, runs locally, guarantees zero hallucinations, and provides verifiable page provenance."*
-
-### 2. Why did you use PyMuPDF instead of PyPDF2 or PDFMiner?
-> *"PyMuPDF (built on MuPDF C-library) is significantly faster — often 10x to 20x faster than pure-Python PDF parsers. It accurately preserves page numbering, handles complex font encodings, and provides clean text extraction with bounding boxes if needed."*
-
-### 3. How does TF-IDF find the right passage?
-> *"Term Frequency measures how frequently a query word appears in a specific passage. Inverse Document Frequency down-weights ubiquitous English words that appear across all passages (like 'the', 'is', 'system') and up-weights discriminative terms (like 'backpropagation' or 'precision'). When we compute the cosine similarity between the query vector and passage vectors, passages with high concentrations of the rare query terms score highest."*
-
----
-
-## 📄 License
-This project is open-source and available under the **MIT License**.
